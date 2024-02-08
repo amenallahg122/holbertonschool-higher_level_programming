@@ -66,4 +66,6 @@ class Rectangle:
 
     def __repr__(self):
         """ string represent the rectangle """
-        return("Rectangle({}, {})".format(self.width, self.height))
+        waywa = "Rectangle(" + str(self.__width)
+        waywa += ", " + str(self.__height) + ")"
+        return (waywa)
