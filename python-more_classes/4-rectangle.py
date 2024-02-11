@@ -10,6 +10,7 @@ class Rectangle:
         self.height = height
 
         """ Private instance width """
+
     @property
     def width(self):
         """width of the rectangle"""
@@ -24,6 +25,7 @@ class Rectangle:
         self.__width = value
 
         """ Private instance height """
+
     @property
     def height(self):
         """height of the rectangle"""
@@ -61,11 +63,11 @@ class Rectangle:
             for j in range(self.__width):
                 rectangle += "#"
             if i != self.__height - 1:
-                rectangle += ("\n")
-        return (rectangle)
+                rectangle += "\n"
+        return rectangle
 
     def __repr__(self):
-        """ string represent the rectangle """
+        """string represent the rectangle"""
         waywa = "Rectangle(" + str(self.__width)
         waywa += ", " + str(self.__height) + ")"
-        return (waywa)
+        return waywa
