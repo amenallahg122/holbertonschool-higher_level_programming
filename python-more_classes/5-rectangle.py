@@ -10,6 +10,7 @@ class Rectangle:
         self.height = height
 
         """ Private instance width """
+
     @property
     def width(self):
         """with of the rectangle"""
@@ -24,6 +25,7 @@ class Rectangle:
         self.__width = value
 
         """ Private instance height """
+
     @property
     def height(self):
         """height of the rectangle"""
@@ -61,14 +63,15 @@ class Rectangle:
             for j in range(self.__width):
                 rectangle += "#"
             if i != self.__height - 1:
-                rectangle += ("\n")
-        return (rectangle)
+                rectangle += "\n"
+        return rectangle
 
     def __repr__(self):
-        """ string represent the rectangle """
-        return("Rectangle({}, {})".format(self.width, self.height))
+        """string represent the rectangle"""
+        return "Rectangle({}, {})".format(self.width, self.height)
 
     """print messsage when an instance Rectangle is deleted"""
+
     def __del__(self):
         """delete"""
         print("Bye rectangle...")
