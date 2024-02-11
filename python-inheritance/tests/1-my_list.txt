@@ -1,27 +1,84 @@
-#import module
->>> MyList = __import__('1-my_list').MyList
+    >>> MyList = __import__('1-my_list').MyList
 
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(4)
->>> my_list.append(2)
->>> my_list.append(3)
->>> my_list.append(5)
->>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
->>> my_list = MyList()
->>> my_list.append(-99)
->>> my_list.append(99)
->>> my_list.append(-100)
->>> my_list.append(2)
->>> my_list.append(88)
->>> my_list.append(0)
->>> my_list.append(100)
->>> my_list.print_sorted()
-[-100, -99, 0, 2, 88, 99, 100]
->>> my_list = MyList()
->>> my_list.append('w')
->>> my_list.append('a')
->>> my_list.append('A')
->>> my_list.append("true")
->>> my_list.append(18.55)
+check that the list printed correctly
+
+
+
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> print(my_list)
+	[1, 2, 3]
+
+
+
+check print sorted
+
+
+
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+
+
+
+
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+empty list
+
+
+
+	>>> my_list = MyList()
+	>>> print(my_list)
+	[]
+
+
+
+	>>> my_list.print_sorted()
+	[]
+
+negative number
+
+
+
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(-4)
+	>>> my_list.append(5)
+	>>> my_list.append(-2)
+	>>> my_list.append(3)
+	>>> print(my_list)
+	[1, -4, 5, -2, 3]
+
+
+
+	>>> my_list.print_sorted()
+	[-4, -2, 1, 3, 5]
+
+
+
+	>>> my_list = MyList()
+	>>> my_list.append("hello")
+	>>> my_list.append("ab")
+	>>> my_list.append("school")
+	>>> print(my_list)
+	['hello', 'ab', 'school']
+
+
+
+	>>> my_list.print_sorted()
+	['ab', 'hello', 'school']
+
+
+
+	>>> print(my_list)
+	['hello', 'ab', 'school']
+	
