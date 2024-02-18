@@ -24,14 +24,12 @@ class Base:
         else:
             self.id = id
 
-        """
-        Dictionary to JSON string
-        """
+
 
     @staticmethod
     def to_json_string(list_dictionaries):
         """
-        static method that returns returns the
+        static method that returns the
         JSON string representation of list_dictionaries
         """
 
