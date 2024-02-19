@@ -94,33 +94,18 @@ class Rectangle(Base):
         """
         Update
         """
-        if args and len(args) != 0:
-            for idx in range(len(args)):
-                if idx == 0:
-                    self.id = args[idx]
-                elif idx == 1:
-                    self.__width = args[idx]
-                elif idx == 2:
-                    self.__height = args[idx]
-                elif idx == 3:
-                    self.__x = args[idx]
-                elif idx == 4:
-                    self.__y = args[idx]
-        else:
-            if len(kwargs) > 0:
-                key = kwargs.keys()
-                for i in key:
-                    if i == "id":
-                        self.id = kwargs["id"]
-                    elif i == "width":
-                        self.__width = kwargs["width"]
-
-                    elif i == "height":
-                        self.__height = kwargs["height"]
-                    elif i == "x":
-                        self.__x = kwargs["x"]
-                    elif i == "y":
-                        self.__y = kwargs["y"]
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) >= 2:
+            self.width = args[1]
+        if len(args) >= 3:
+            self.height = args[2]
+        if len(args) >= 4:
+            self.x = args[3]
+        if len(args) >= 5:
+            self.y = args[4]
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def to_dictionary(self):
         """
